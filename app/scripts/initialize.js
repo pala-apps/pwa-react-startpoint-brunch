@@ -1,3 +1,6 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+
 var isLocalhost = Boolean(window.location.hostname === 'localhost' ||
   // [::1] is the IPv6 localhost address.
   window.location.hostname === '[::1]' ||
@@ -47,9 +50,7 @@ if ('serviceWorker' in navigator &&
   });
 }
 
-var request = new XMLHttpRequest();
-request.open("GET", "https://restcountries.eu/rest/v1/all");
-request.onload = function(){
-  console.log('got data', request.responseText);
-}
-request.send();
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('app')
+);
