@@ -5,14 +5,14 @@ import React from 'react';
 import { render } from 'react-dom';
 import { createStore } from 'redux';
 import dummyReducer  from './reducers'
-import DummyContainer from './components/DummyContainer'
+import DummyContainer from './components/AppContainer'
 import { Provider } from 'react-redux'
 let store = createStore(dummyReducer);
 
 
 render(
   <Provider store={store}>
-    <DummyContainer/>
+    <AppContainer/>
   </Provider>,
   document.getElementById('app')
 );
